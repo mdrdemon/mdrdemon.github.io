@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Modern</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="toggle-wrapper">
+    <label class="switch">
+      <input type="checkbox" onchange="toggleDarkMode()">
+      <span class="slider"></span>
+    </label>
+    <span>Dark Mode</span>
+  </div>
+
+  <header class="hero">
+    <img src="profile.jpg" class="profile-img" alt="Foto Profil">
+    <h1>Matthew Dawson Rohan</h1>
+    <p>saya masih seorang siswa di SMA Santa Theresia</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" onclick="showTab(event, 'pendidikan')">Pendidikan</button>
+    <button class="tab-btn" onclick="showTab(event, 'hobi')">Hobi</button>
+    <button class="tab-btn" onclick="showTab(event, 'karya')">Karya</button>
+  </nav>
+
+  <main class="container fade-in">
+
+    <!-- PENDIDIKAN -->
+    <section id="pendidikan" class="tab-content">
+      <h2>Riwayat Pendidikan</h2>
+
+      <div class="card">
+        <h3>SD Santo Paulus</h3>
+        <img src="sd.jpg" alt= onclick="" openModal(this.src)">
+      </div>
+
+      <div class="card">
+        <h3>SMP Santa Maria</h3>
+        <img src="smp.jpg" onclick="openModal(this.src)">
+      </div>
+
+      <div class="card">
+        <h3>SMA Santa Theresia</h3>
+        <img src="sma.jpg" onclick="openModal(this.src)">
+      </div>
+    </section>
+
+    <!-- HOBI -->
+    <section id="hobi" class="tab-content hidden">
+      <h2>Hobi Saya</h2>
+
+      <div class="card">
+        <h3>Bermain Game</h3>
+        <img src="hobi1.jpg" onclick="openModal(this.src)">
+      </div>
+
+      <div class="card">
+        <h3>Menggambar</h3>
+        <img src="hobi2.jpg" onclick="openModal(this.src)">
+      </div>
+    </section>
+
+    <!-- KARYA -->
+    <section id="karya" class="tab-content hidden">
+      <h2>Karya Saya</h2>
+      <br>
+      <div class="card2">
+        <h3>Absensi Siswa</h3>
+        <img src="karya1.png" onclick="openModal(this.src)" class="gambarkarya1">
+      </div>
+
+      <div class="card">
+        <h3>Thinking Math</h3>
+        <img src="karya2.png" onclick="openModal(this.src)">
+      </div>
+    </section>
+  </main>
+
+
+  <!-- MODAL FULLSCREEN GAMBAR -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <img id="modalImage">
+  </div>
+
+  <footer>
+    <p>© 2025 - Portofolio Pribadi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
